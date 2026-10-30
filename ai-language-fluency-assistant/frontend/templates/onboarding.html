@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set up your learning - FluencyAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css?v=3">
+  <link rel="stylesheet" href="/static/css/onboarding.css?v=1">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="/"><span class="logo-icon">🗣️</span> FluencyAI</a>
+      <nav class="nav-links">
+        <a href="#" id="logout-link" class="btn-login">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container onb-wrap">
+    <div class="onb-card">
+      <h1>Let's set up your learning ✨</h1>
+      <p class="onb-sub">Bas kuch sawal. Isse AI tumhare level aur goal ke hisaab se baat karega.</p>
+
+      <form id="onb-form" class="onb-form">
+        <label>Main kaunsi language bolta/bolti hoon
+          <select id="native_lang" name="native_lang" required></select>
+        </label>
+
+        <label>Mujhe kaunsi language seekhni hai
+          <select id="target_language_id" name="target_language_id" required></select>
+        </label>
+
+        <label>Mera current level
+          <select id="level" name="level" required></select>
+        </label>
+
+        <label>Mera goal
+          <select id="goal" name="goal" required></select>
+        </label>
+
+        <label>Roz kitna time dunga/dungi
+          <select id="daily_target_minutes" name="daily_target_minutes" required>
+            <option value="5">5 minutes</option>
+            <option value="10" selected>10 minutes</option>
+            <option value="15">15 minutes</option>
+            <option value="30">30 minutes</option>
+            <option value="60">1 hour</option>
+          </select>
+        </label>
+
+        <label>Seekhne ka tareeka
+          <select id="learning_style" name="learning_style" required></select>
+        </label>
+
+        <label>Galtiyan kab sudharni hain
+          <select id="correction_pref" name="correction_pref" required>
+            <option value="after" selected>Baat-cheet ke baad (tokna nahi)</option>
+            <option value="immediate">Turant, har message ke baad</option>
+            <option value="important">Sirf zaroori galtiyan</option>
+          </select>
+        </label>
+
+        <label>Age range (optional)
+          <select id="age_range" name="age_range">
+            <option value="">Batana nahi chahta/chahti</option>
+            <option value="under 18">18 se kam</option>
+            <option value="18-24">18-24</option>
+            <option value="25-34">25-34</option>
+            <option value="35-44">35-44</option>
+            <option value="45+">45+</option>
+          </select>
+        </label>
+
+        <button class="btn" type="submit" id="onb-submit">Start learning →</button>
+      </form>
+
+      <p id="onb-message" class="auth-message" role="status"></p>
+    </div>
+  </main>
+
+  <script src="/static/js/onboarding.js?v=1"></script>
+</body>
+</html>

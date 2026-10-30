@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FluencyAI - AI Language Learning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="/"><span class="logo-icon">🗣️</span> FluencyAI</a>
+      <nav class="nav-links">
+        <a href="#tutors">Tutors</a>
+        <a href="#features">Features</a>
+        <a href="#" data-open-auth="register">Signup</a>
+        <a href="#" class="btn-login" data-open-auth="login">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>AI Language Learning</h1>
+      <p class="lead">
+        Master languages with your personal AI tutor.
+        Real conversations, real results, 24/7.
+      </p>
+
+      <a href="#" class="cta" data-open-auth="register">Speak now for FREE →</a>
+    </div>
+  </section>
+
+  <section class="tutors" id="tutors">
+    <div class="container">
+      <div class="tutor-row">
+
+        <article class="tutor" style="--c1:#ff8a65;--c2:#ffd180">
+          <div class="avatar">👩‍🏫</div>
+          <span class="code">EN</span>
+          <h3>Aria</h3>
+          <p>English</p>
+          <button class="chip" type="button" data-open-auth="register">Start chat</button>
+        </article>
+
+        <article class="tutor" style="--c1:#7e57c2;--c2:#b39ddb">
+          <div class="avatar">🧑‍🏫</div>
+          <span class="code">HI</span>
+          <h3>Riya</h3>
+          <p>हिन्दी · Hindi</p>
+          <button class="chip" type="button" data-open-auth="register">Start chat</button>
+        </article>
+
+        <article class="tutor" style="--c1:#26a69a;--c2:#80cbc4">
+          <div class="avatar">👩‍🎤</div>
+          <span class="code">ES</span>
+          <h3>Sofia</h3>
+          <p>Español · Spanish</p>
+          <button class="chip" type="button" data-open-auth="register">Start chat</button>
+        </article>
+
+        <article class="tutor" style="--c1:#42a5f5;--c2:#90caf9">
+          <div class="avatar">👨‍🎨</div>
+          <span class="code">FR</span>
+          <h3>Chloé</h3>
+          <p>Français · French</p>
+          <button class="chip" type="button" data-open-auth="register">Start chat</button>
+        </article>
+
+        <article class="tutor" style="--c1:#ef5350;--c2:#ef9a9a">
+          <div class="avatar">🧑‍💼</div>
+          <span class="code">DE</span>
+          <h3>Max</h3>
+          <p>Deutsch · German</p>
+          <button class="chip" type="button" data-open-auth="register">Start chat</button>
+        </article>
+
+        <article class="tutor" style="--c1:#ec407a;--c2:#f8bbd0">
+          <div class="avatar">👩‍🎓</div>
+          <span class="code">JA</span>
+          <h3>Yuki</h3>
+          <p>日本語 · Japanese</p>
+          <button class="chip" type="button" data-open-auth="register">Start chat</button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="container feature-row">
+      <div class="feature"><span>💬</span><b>AI Chat</b><small>Dost ki tarah baat karo</small></div>
+      <div class="feature"><span>✅</span><b>Smart corrections</b><small>Pyaar se sudhaar</small></div>
+      <div class="feature"><span>🎯</span><b>Daily practice</b><small>Roz thoda behtar</small></div>
+      <div class="feature"><span>🎮</span><b>Games &amp; XP</b><small>Seekhna ho maza</small></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">© 2026 FluencyAI · Learn · Practice · Chat · Improve</div>
+  </footer>
+
+  <!-- Login / Register popup -->
+  <div id="auth-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modal-close" type="button" aria-label="Close">×</button>
+      <h2 class="auth-title">Welcome 👋</h2>
+      <p class="auth-sub">Login karo ya naya account banao</p>
+
+      <div class="tabs">
+        <button class="tab active" data-tab="login" type="button">Login</button>
+        <button class="tab" data-tab="register" type="button">Register</button>
+      </div>
+
+      <form id="login-form" class="form">
+        <label>Email
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label>Password
+          <input type="password" name="password" placeholder="Your password" required>
+        </label>
+        <button class="btn" type="submit">Login</button>
+      </form>
+
+      <form id="register-form" class="form hidden">
+        <label>Name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label>Email
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label>Password (min 8 characters)
+          <input type="password" name="password" placeholder="Create a password" minlength="8" required>
+        </label>
+        <button class="btn" type="submit">Create account</button>
+      </form>
+
+      <p id="auth-message" class="auth-message" role="status"></p>
+    </div>
+  </div>
+
+  <!-- Cookie banner -->
+  <div id="cookie-banner" class="cookie hidden">
+    <p>Hum website behtar banane ke liye cookies use karte hain. Aage badhne par aap isse sahmat ho.</p>
+    <div class="cookie-actions">
+      <button class="cookie-accept" id="cookie-accept" type="button">Accept</button>
+      <button class="cookie-decline" id="cookie-decline" type="button">Decline</button>
+    </div>
+  </div>
+
+    <script src="/static/js/app.js?v=3"></script>
+</body>
+</html>

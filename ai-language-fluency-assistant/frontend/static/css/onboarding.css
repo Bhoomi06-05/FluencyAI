@@ -1,0 +1,22 @@
+.onb-wrap { padding: 40px 0 70px; }
+
+.onb-card {
+  max-width: 640px; margin: 0 auto; background: #fff;
+  border-radius: 22px; padding: 34px 30px; box-shadow: var(--shadow);
+}
+.onb-card h1 { margin: 0 0 6px; font-size: 1.8rem; }
+.onb-sub { margin: 0 0 24px; color: var(--muted); }
+
+.onb-form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.onb-form label { display: flex; flex-direction: column; gap: 6px; font-size: 0.88rem; font-weight: 800; }
+.onb-form select {
+  padding: 12px 14px; border: 1.5px solid #d3e3e1; border-radius: 11px;
+  font-size: 1rem; font-family: inherit; background: #fff; color: var(--ink);
+  outline: none; transition: border 0.15s, box-shadow 0.15s;
+}
+.onb-form select:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(23, 179, 163, 0.2); }
+.onb-form .btn { grid-column: 1 / -1; margin-top: 6px; }
+
+@media (max-width: 640px) {
+  .onb-form { grid-template-columns: 1fr; }
+}

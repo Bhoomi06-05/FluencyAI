@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - FluencyAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css?v=3">
+  <link rel="stylesheet" href="/static/css/dashboard.css?v=1">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="/dashboard"><span class="logo-icon">🗣️</span> FluencyAI</a>
+      <nav class="nav-links">
+        <a href="/chat">💬 Chat</a>
+        <a href="/onboarding">Settings</a>
+        <a href="#" id="logout-link" class="btn-login">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container dash">
+
+    <section class="welcome">
+      <div>
+        <p class="hello-small">Welcome back</p>
+        <h1 id="hello">Namaste 👋</h1>
+        <p class="hello-sub">Aaj kya seekhna hai? Language chuno aur shuru karo.</p>
+      </div>
+      <div class="stat-chips">
+        <span class="stat-chip fire off" id="chip-streak">🔥 0 days</span>
+        <span class="stat-chip" id="chip-lang">🌐 ...</span>
+        <span class="stat-chip" id="chip-level">🎯 ...</span>
+      </div>
+    </section>
+
+    <section class="continue-card">
+      <div class="continue-badge" id="continue-glyph">A</div>
+      <div class="continue-text">
+        <small>Continue learning</small>
+        <h2 id="continue-title">Loading...</h2>
+        <p id="continue-sub"></p>
+      </div>
+      <a class="continue-btn" href="/chat">Continue →</a>
+    </section>
+
+    <h2 class="section-title">Choose a language</h2>
+    <p class="section-note">Kisi bhi card par click karo aur apna level chuno. Language kabhi bhi badal sakte ho.</p>
+    <div id="lang-grid" class="lang-grid"></div>
+
+    <h2 class="section-title">Aaj ka plan</h2>
+    <p class="section-note">Ye sab features ek-ek karke aa rahe hain.</p>
+    <div class="plan-grid">
+      <a class="plan-card" href="/chat">
+        <div class="p-icon">💬</div>
+        <h3>AI Chat</h3>
+        <p>Apne AI tutor se baat karo.</p>
+      </a>
+      <div class="plan-card soon">
+        <span class="soon-tag">Soon</span>
+        <div class="p-icon">🎯</div>
+        <h3>Daily practice</h3>
+        <p>Roz ke chhote tasks.</p>
+      </div>
+      <div class="plan-card soon">
+        <span class="soon-tag">Soon</span>
+        <div class="p-icon">📖</div>
+        <h3>Vocabulary</h3>
+        <p>Naye words aur meaning.</p>
+      </div>
+      <div class="plan-card soon">
+        <span class="soon-tag">Soon</span>
+        <div class="p-icon">🎮</div>
+        <h3>Games &amp; XP</h3>
+        <p>Quizzes, badges, levels.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <div id="level-modal" class="modal hidden">
+    <div class="modal-box">
+      <button class="modal-close" id="level-close" type="button" aria-label="Close">×</button>
+      <h2 class="auth-title" id="level-title">Language</h2>
+      <p class="auth-sub">Apna level chuno. Pata na ho to Beginner chuno, baad mein badal sakte ho.</p>
+      <div id="level-list" class="level-list"></div>
+      <button class="btn" id="level-start" type="button">Start →</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="/static/js/dashboard.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat - FluencyAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css?v=3">
+  <link rel="stylesheet" href="/static/css/chat.css?v=1">
+</head>
+<body class="chat-body">
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="/"><span class="logo-icon">🗣️</span> FluencyAI</a>
+      <nav class="nav-links">
+        <a href="/onboarding">Settings</a>
+        <a href="#" id="logout-link" class="btn-login">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="chat-main">
+    <section class="chat-shell">
+
+      <div class="chat-top">
+        <div class="chat-title">
+          <b>AI Tutor</b>
+          <span id="chat-info" class="chat-info">Loading...</span>
+        </div>
+        <div class="chat-controls">
+          <select id="mode-select" aria-label="Chat mode">
+            <option value="friendly">😊 Friendly</option>
+            <option value="teacher">👩‍🏫 Teacher</option>
+            <option value="practice">🎯 Practice</option>
+            <option value="interview">💼 Interview</option>
+            <option value="roleplay">🎭 Roleplay</option>
+            <option value="free_chat">💬 Free chat</option>
+          </select>
+          <button id="new-chat" class="btn-ghost" type="button">+ New chat</button>
+        </div>
+      </div>
+
+      <div id="messages" class="messages" aria-live="polite"></div>
+
+      <form id="chat-form" class="chat-form">
+        <textarea id="chat-input" rows="1" placeholder="Kuch bhi likho... (Enter = send, Shift+Enter = new line)" maxlength="1000" required></textarea>
+        <button class="btn" id="send-btn" type="submit">Send</button>
+      </form>
+
+    </section>
+  </main>
+
+  <script src="/static/js/chat.js?v=1"></script>
+</body>
+</html>
